@@ -7,7 +7,7 @@ import SignInAndSignUp from './page/sign-in-and-sign-out/sign-in-and-sign-out.co
 import Header from './components/header/header-component';
 import { auth } from './firebase/firebase.utils';
 
-class App extends React.Component() {
+class App extends React.Component {
 
   constructor() {
     super();
@@ -32,7 +32,7 @@ class App extends React.Component() {
   render() {
     return (
       <div>
-        <Header />
+        <Header currentUser={ this.state.currentUser } />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path ='/shop' component={ShopPage} />
